@@ -1,0 +1,25 @@
+ .toolBoxContainer{
+    @apply absolute top-1/2 left-5 border-2 border-slate-300 rounded-md px-5 py-1 w-1/6 shadow-lg shadow-cyan-500/50;
+    background-color: aliceblue;
+    .brushColorsContainer{
+      @apply flex flex-col flex-wrap mt-2 mb-2;
+       .brushColorsHeaders{
+         @apply text-lg font-medium font-sans text-blue-500;
+       }
+       .brushColorsDiv{
+         @apply flex flex-wrap;
+         .colorBox{
+            @apply w-10 h-10 m-2;
+            &:hover{
+               border: 1px solid rgb(203 213 225);
+               cursor: pointer;
+            }
+         }
+       }
+    }
+    .brushSizeContainer{
+      .brushColorsHeaders{
+         @apply text-lg font-medium font-sans text-blue-500;
+      }
+    }
+ }

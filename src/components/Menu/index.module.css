@@ -1,10 +1,10 @@
 .menuContainer {
-    @apply flex absolute top-10 w-1/4 left-1/2 px-5 py-5 border-2 border-slate-300 justify-between rounded-md;
+    @apply flex absolute top-10 w-1/4 left-1/2 px-5 py-1 border-2 border-slate-300 justify-between rounded-md shadow-lg shadow-cyan-500/50;
     transform: translateX(-50%);
     background-color: aliceblue; /**add this container bg color **/
 
     .iconWrapper{
-        @apply cursor-pointer flex h-10 w-10 rounded-md justify-center items-center;
+        @apply cursor-pointer flex h-10 w-10 rounded-lg justify-center items-center;
         &:hover{
             background-color:rgb(203 213 225); /**whenever hover **/
         }
