@@ -6,7 +6,7 @@ const canvasRef = React.useRef(null);
 const clickedVisualMenuItem = useSelector((state)=> state.menu.activeVisualChangesMenuItem);
 const {color, size} = useSelector((state)=> state.toolBox[clickedVisualMenuItem]);
 
-console.log(clickedVisualMenuItem,color,size )
+// console.log(clickedVisualMenuItem,color,size )
 
 React.useEffect(()=>{
   const canvas = canvasRef.current;
