@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux';
 const Board = () => {
 const canvasRef = React.useRef(null);
 const clickedVisualMenuItem = useSelector((state)=> state.menu.activeVisualChangesMenuItem);
-const chosenColor = useSelector((state)=> state.toolBox.color);
-const chosenBrushSize = useSelector((state)=> state.toolBox.brushSize);
-console.log(clickedVisualMenuItem,chosenColor,chosenBrushSize )
+const {color, size} = useSelector((state)=> state.toolBox[clickedVisualMenuItem]);
+
+console.log(clickedVisualMenuItem,color,size )
 
 React.useEffect(()=>{
   const canvas = canvasRef.current;
