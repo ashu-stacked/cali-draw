@@ -10,8 +10,8 @@
          @apply flex flex-wrap;
          .colorBox{
             @apply w-10 h-10 m-2;
-            &:hover{
-               border: 1px solid rgb(203 213 225);
+            &:hover, &.active{
+               border: 1px solid rgb(5, 69, 147);
                cursor: pointer;
             }
          }
