@@ -7,6 +7,7 @@ import { brushSizeChosenForVisualMenuItem, colorChosenForVisualMenuItem } from '
 const Toolbox = () => {
 const clickedVisualMenuItem = useSelector((state)=> state.menu.activeVisualChangesMenuItem);
 const chosenColor = useSelector((state)=>state.toolBox[clickedVisualMenuItem].color)
+const chosenSize = useSelector((state)=>state.toolBox[clickedVisualMenuItem].size)
 const dispatch = useDispatch();
 
 const handleBrushSize =(size) =>{
@@ -27,7 +28,7 @@ const handleColorClick = (color)=>{
         </div>}
         <div className={styles.brushSizeContainer}>
           <h4 className={styles.brushColorsHeaders}>Sizes</h4>
-            <input type="range" min="0" max="5" step ="1" onClick = {(event)=>{handleBrushSize(event.target.value)}}/>
+            <input type="range" min={1} max={10} step ={1} onChange = {(event)=>{handleBrushSize(event.target.value)}} value={chosenSize}/>
         </div>
     </div>
   )
